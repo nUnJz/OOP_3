@@ -4,7 +4,7 @@ namespace OOP_3_2
 {
     class Book
     {
-
+        
     }
     class Title : Book
     {

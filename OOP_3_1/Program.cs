@@ -15,17 +15,6 @@ namespace OOP_3_1
             this.side2 = side2;
         }
 
-        // властивості
-        public double Area
-        {
-            get { return Area; }
-        }
-
-        public double Perimeter
-        {
-            get { return Perimeter; }
-        }
-
         // методи
         public double AreaCalculator()
         {
@@ -35,6 +24,17 @@ namespace OOP_3_1
         public double PerimeterCalculator()
         {
             return (side1 + side2) * 2;
+        }
+
+        // властивості
+        public double Area
+        {
+            get { return side1 * side2; }
+        }
+
+        public double Perimeter
+        {
+            get { return (side1 + side2) * 2; }
         }
     }
     class Program

@@ -8,23 +8,34 @@ namespace OOP_3_4
         private int account;
         private string customer;
         private string provider;
+        private string article;
         private int quantity;
-        private double price;
 
         // конструктор
-        public Invoice(int account, string customer, string provider, int qty, double price)
+        public Invoice(int account, string customer, string provider, string article, int qty)
         {
             this.account = account;
             this.customer = customer;
             this.provider = provider;
+            this.article = article;
             Quantity = qty;
-            Price = price;
         }
 
         // властивості
         public int Account
         {
             get { return account; }
+            /* set
+            {
+                if (value > 0)
+                {
+                    account = value;
+                }
+                else
+                {
+                    Console.WriteLine("Помилка!");
+                }
+            } */
         }
 
         public string Customer
@@ -35,6 +46,12 @@ namespace OOP_3_4
         public string Provider
         {
             get { return provider; }
+        }
+
+        public string Article
+        {
+            get { return article; }
+            set { article = value; }
         }
 
         public int Quantity
@@ -48,33 +65,15 @@ namespace OOP_3_4
                 }
                 else
                 {
-                    quantity = 1;
-                    Console.WriteLine("Помилка!");
-                }
-            }
-        }
-
-        public double Price
-        {
-            get { return price; }
-            set
-            {
-                if (value > 0)
-                {
-                    price = value;
-                }
-                else
-                {
-                    price = 1;
                     Console.WriteLine("Помилка!");
                 }
             }
         }
 
         // метод
-        public double GetInvoiceAmount()
+        public int GetInvoiceAmount()
         {
-            return Quantity * Price;
+            return Quantity * Account;
         }
     }
 
@@ -84,21 +83,21 @@ namespace OOP_3_4
         {
             Console.OutputEncoding = System.Text.Encoding.Default;
             int qty;
-            double price;
+            int account;
             Console.WriteLine("Введіть кількість одиниць товару: ");
             qty = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введіть ціну одиниці товару (price): ");
-            price = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введіть ціну одиниці товару (account): ");
+            account = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
-            Invoice invoice = new Invoice(260012345, "Fenix", "Platon", qty, price); // створення екземпляру класу
+            Invoice invoice = new Invoice(account, "Fenix", "Platon", "NKBSM39BL", qty); // створення екземпляру класу
 
-            Console.WriteLine($"Account: {invoice.Account}");
+            Console.WriteLine($"Ціна: {invoice.Account}");
             Console.WriteLine($"Customer: {invoice.Customer}");
             Console.WriteLine($"Provider: {invoice.Provider}");
+            Console.WriteLine($"Article: {invoice.Article}");
             Console.WriteLine($"Кількість: {invoice.Quantity}");
-            Console.WriteLine($"Ціна: {invoice.Price}");
 
             Console.WriteLine();
             Console.WriteLine($"Вартість замовлення без ПДВ: {invoice.GetInvoiceAmount()}");
