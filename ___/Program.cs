@@ -9,7 +9,7 @@ namespace OOP_3_3
         public int _y;
         public string _nameFigure;
 
-        public Point() { }// конструктор без параметрів
+        public Point() {}// конструктор без параметрів
 
         // конструктор з параметрами
         public Point(int x, int y, string nameFigure)
@@ -133,7 +133,7 @@ namespace OOP_3_3
 
             while (true)
             {
-                Console.Write("1. Трикутник\n2. Чотирикутник\n3. П'ятикутник\nОберіть фігуру: ");
+                Console.Write(new string('=', 50) + "\n1. Трикутник\n2. Чотирикутник\n3. П'ятикутник\nОберіть фігуру: ");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)

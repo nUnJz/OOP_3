@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_3_4", "OOP_3_4\OOP_3_4.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{5E963549-E5E7-43A0-882F-F5AC309580C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polygon", "Polygon\Polygon.csproj", "{2CC18C55-3E23-490B-830D-016EF860C791}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon", "Polygon\Polygon.csproj", "{2CC18C55-3E23-490B-830D-016EF860C791}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
